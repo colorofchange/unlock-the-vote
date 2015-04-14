@@ -1,0 +1,14 @@
+{
+  "name": "unlock-the-vote",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "unlock-the-vote"
+  },
+  "author": "Josh Levinger <josh@spacedog.xyz> (http://spacedog.xyz/)",
+  "license": "MIT",
+  "devDependencies": {
+  }
+}

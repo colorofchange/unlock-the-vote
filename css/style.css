@@ -1,0 +1,585 @@
+/* css reset */
+html, body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 12px;
+	line-height: 1;
+	font-family: inherit;
+	text-align: left;
+	vertical-align: baseline;
+	position: relative;
+	left: 0;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+img {
+	border: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: "Georgia",serif;
+}
+
+input, textarea {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* small mobile and default css */
+body {
+	width: 100%;
+}
+
+p {
+	margin: 0 0 10px;
+	font-size: 14px;
+	line-height: 1.3em;
+}
+
+a {
+	color: #00AEEF;
+	text-decoration: none;
+}
+
+.tablet, .desktop {
+	display: none;
+}
+
+#header {
+	width: 100%;
+	min-width: 320px;
+	background: #222222;
+}
+
+#header .content {
+	width: 100%;
+	padding: 8px 10px;
+}
+
+#header .content img {
+	height: 25px;
+}
+
+#main {
+	width: 100%;
+	min-width: 320px;
+	background: #EEEEEE url(https://s3.amazonaws.com/s3.colorofchange.org/images/bg_header_new.gif) repeat-x top left;
+}
+
+#main .content {
+	padding: 15px 15px;
+	background: #FFFFFF;
+}
+
+#main .page-title {
+	margin: 0 0 15px;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 1.2em;
+}
+#main .desktop-title {display: none;}
+
+#main .petition-body {
+	background: #EEEEEE;
+	padding: 15px 15px;
+	margin: 15px 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+#main .petition-title {
+	margin: 0 0 10px;
+	color: #d50000;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+#main .petition-delivery {
+	font-style: italic;
+	font-size: 14px;
+}
+
+#main .petition-text {
+	font-weight: normal;
+	font-size: 16px;
+}
+
+#main #ak-errors {
+	color: #FF0000;
+}
+
+#main #unknown_user ul, #main #petition_extra_fields ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#main .petition-body label {
+	display: none;
+}
+
+#main input[type="text"], #main input[type="email"], #main input[type="tel"], #main textarea, #main select {
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 14px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: 1px solid #CCCCCC;
+	padding: 6px 8px;
+}
+
+#main select {
+	width: 98%;
+	height: 39px;
+	-webkit-appearance: none;
+	vertical-align: middle;
+}
+/* Fix for webkit browsers */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+#main select {
+	background: #FFFFFF url(//s3.amazonaws.com/s3.colorofchange.org/images/select_arrow.png) no-repeat center right;
+}
+
+}
+
+#main #country_drop_down {
+	display: none;
+}
+
+#main .not_in_us, #main #country_drop_down .info {
+	display: block;
+	width: 98%;
+	text-align: right;
+	font-size: 11px;
+	margin: 2px 0 7px;
+}
+
+#main #known_user {
+	margin: 0 0 5px;
+}
+
+#main .content textarea {
+	height: 60px;
+}
+
+#main .content input[type="submit"] {
+	margin: 10px 0 15px;
+}
+
+#main .field-note {
+	font-style: italic;
+	margin: 0 0 25px;
+}
+
+#main .optin-fieldset {
+	margin: 0 0 5px;
+}
+
+#main .petition-disclaimer {
+	font-size: 10px;
+}
+
+#main .action-image  {
+	width: 100%;
+	margin: 15px 0;
+}
+
+#main .petition-statement {
+	padding: 15px;
+	margin: 0 0 15px;
+	background: #EEEEEE;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	font-family: "Georgia", serif;
+}
+#main .petition-statement .lead-in p {
+	color: #666666;
+	font-size: 14px;
+}
+#main .petition-statement p {
+	color: #333333;
+	font-size: 12px;
+}
+
+#main #mobile_sign_btn {
+	display: block;
+	float: left;
+}
+
+#footer {
+	width: 100%;
+	padding: 20px 0 40px;
+	color: #999999;
+	background: #000000;
+}
+
+#footer .content {
+	padding: 0 10px;
+}
+
+#footer .content span {
+	display: block;
+	text-align: center;
+	margin: 0 0 15px;
+}
+
+
+/* Thermometer Styles */
+#progress .progress-bar {
+	background: #d50000;
+}
+
+.progress-percent {
+	color:white;
+}
+
+/* Thank-you page styles */
+
+
+/* Helper classes */
+
+.red-button {
+	background: #d50000;
+	color: #FFFFFF;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: normal;
+	border: none;
+	padding: 5px 15px;
+	font-family: "din-condensed-web",sans-serif;
+}
+.blue-button:hover {
+	cursor: pointer;
+}
+.clearfix { clear: both; }
+
+.partner-logos {
+	text-align: center;
+}
+img.partner-logo {
+	width:100%;
+	max-width:300px;
+}
+
+#script {
+	font-size: 1.3em;
+}
+#script ul {
+	text-align: left;
+	list-style-type: circle;
+}
+#script ul li {
+	margin-bottom: 10px;
+}
+
+/* Media Queries for Responsive Design. */
+
+@media only screen and (min-width: 480px) {
+
+/*most smart phones on landscape*/
+
+.sp {
+	display:block;
+	margin-bottom: 10px;
+}
+
+}
+
+@media only screen and (min-width: 680px) {
+
+/* big phones*/
+.tablet {
+	display: block;
+}
+
+.mobile {
+	display: none;
+}
+
+#header .content {
+	width: 680px;
+	margin: 0 auto;
+	padding: 10px 0 5px;
+}
+
+#header .content img {
+	height: 50px;
+}
+
+#main {
+  padding: 10px 0;
+}
+
+#main .content {
+	width: 640px;
+	margin: 0 auto;
+	padding: 20px 20px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+#main .page-title {
+	font-size: 20px;
+	width: 300px;
+}
+#main .desktop-title {display: block;}
+#main .mobile-title {display: none;}
+
+#main .petition-body {
+	width: 280px;
+	float: right;
+	margin: 0 0 0 20px;
+}
+
+#main .petition-title {
+	font-size: 24px;
+}
+
+#main #id_zip, #main #id_country {
+	margin: 0;
+}
+
+#main .action-image {
+	width: 300px;
+	margin: 0 0 20px;
+}
+
+#main .petition-description {
+	width: 300px;
+}
+
+#main #mobile_sign_btn {
+	display: none;
+}
+
+#footer .content {
+	width: 670px;
+	margin: 0 auto;
+	padding: 0 0 20px;
+}
+
+#footer .content .copyright {float: left;}
+#footer .content .links {float: right;}
+
+
+/* Thank-you page styles */
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+/*tablet portrait */
+
+}
+
+@media only screen and (min-width: 830px) {
+
+/* tablet landscape and low res desktop */
+.desktop {
+	display: block;
+}
+
+#header .content {
+	width: 830px;
+	padding: 10px 0;
+}
+
+#header .content img {
+	height: 55px;
+}
+
+#main .content {
+	width: 770px;
+	padding: 20px 30px;
+}
+
+#main .page-title {
+	font-size: 24px;
+	width: 380px;
+}
+
+#main .petition-body {
+	width: 320px;
+	margin: 0 0 0 40px;
+}
+
+#main .phone-fieldset {
+	width: 140px;
+	height: 38px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+}
+#main .optin-fieldset {
+	width: 170px;
+	padding: 8px 0 0;
+	float: right;
+}
+
+#main .action-image {
+	width: auto;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+#main .petition-description {
+	width: 380px;
+}
+
+#footer .content {
+	width: 820px;
+}
+
+.sp {
+	display: inline-block;
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+/* big desktop */
+
+}
+
+
+/* lt-ie9 STYLES */
+
+/* same code as  (min-width: 980px) with .lt-ie9 prefix AND set width */
+
+.lt-ie9 .tablet, .lt-ie9 .desktop {
+	display: block;
+}
+
+.lt-ie9 .mobile {
+	display: none;
+}
+
+.lt-ie9 #header .content {
+	width: 830px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+.lt-ie9 #header .content img {
+	height: 55px;
+}
+
+.lt-ie9 #main {
+  padding: 10px 0;
+}
+
+.lt-ie9 #main .content {
+	width: 770px;
+	margin: 0 auto;
+	padding: 20px 30px;
+	background: #FFFFFF;
+}
+
+.lt-ie9 #main .page-title {
+	font-size: 24px;
+	width: 380px;
+}
+
+.lt-ie9 #main .petition-body {
+	width: 320px;
+	float: right;
+	margin: 0 0 0 40px;
+}
+
+.lt-ie9 #main .petition-title {
+	font-size: 24px;
+}
+
+.lt-ie9 #main .petition-body label {
+	display: block;
+	font-weight: bold;
+	padding: 5px 0 0;
+}
+
+.lt-ie9 #main input[type="text"], .lt-ie9 #main input[type="email"], .lt-ie9 #main textarea {
+	border: 1px solid #D2D2D2;
+}
+
+.lt-ie9 #main .phone-fieldset {
+	width: 140px;
+	height: 38px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+}
+.lt-ie9 #main .optin-fieldset {
+	width: 170px;
+	height: 48px;
+	padding: 18px 0 0;
+	float: right;
+}
+
+.lt-ie9 #main .action-image {
+	width: auto;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.lt-ie9 #main .petition-description {
+	width: 380px;
+}
+
+.lt-ie9 #main #mobile_sign_btn {
+	display: none;
+}
+
+.lt-ie9 #footer .content {
+	width: 820px;
+	margin: 0 auto;
+	padding: 0 0 20px;
+}
+
+.lt-ie9 #footer .content .copyright {float: left;}
+.lt-ie9 #footer .content .links {float: right;}
+
+
+
+/* IE9 also doesn't support placeholder text, so need to show labels */
+.ie9 #main .petition-body label {
+	display: block;
+	font-weight: bold;
+	padding: 5px 0 0;
+}
+.ie9 #main .optin-fieldset {
+	height: 48px;
+	padding: 18px 0 0;
+}
+
+
+/* IE7 has some additional issues */
+.ie7 #main input[type="text"], .ie7 #main input[type="email"], .ie7 #main input[type="tel"], .ie7 #main textarea, .ie7 #main select {
+	width: 90%;
+}
+
