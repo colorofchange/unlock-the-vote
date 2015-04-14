@@ -1,3 +1,6 @@
+---
+campaignId: md-hogan-vote
+---
 // MT1.11 Compat
 var $E = function(selector, filter){
 	return ($(filter) || document).getElement(selector);
@@ -56,7 +59,7 @@ jQuery( document ).ready(function( $ ) {
         }
 
         var data = {
-            campaignId: 'cbc-nn',
+            campaignId: '{{page.campaignId}}',
             userPhone: validatePhone(phone)
         };
 
