@@ -50,7 +50,7 @@ sp_email: sp_12640
             <div class="petition-body">
                 <ul class="compact" id="ak-errors"></ul>
                 <form class="actionkit-widget" id="phoneForm" action="http://act.colorofchange.org/act/" onsubmit="this.submitted=1;return false">
-                    <input type="hidden" name="page" value="{{actionkit_page}}" />
+                    <input type="hidden" name="page" value="{{page.actionkit_page}}" />
                     <div id="unknown_user">{% include user_form.html %}</div>
                     <div id="known_user" style="display: none;">
                         Not <span id="known_user_name"></span>?  <a href="?" onclick="return actionkit.forms.logOut()">Click here.</a>
