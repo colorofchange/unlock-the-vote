@@ -32,6 +32,24 @@ jQuery( document ).ready(function( $ ) {
         return num;
     };
 
+    var validateZip = function(zip) {
+        re = /^\d{5}(-\d{4})?$/;
+        if (re.test(zip)) {
+            return zip;
+        } else {
+            return false;
+        }
+    };
+
+    var validateEmail = function(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(email)) {
+            return email;
+        } else {
+            return false;
+        }
+    };
+
     onWidgetSubmit = function(e) {
 //        e.preventDefault();
 
@@ -44,6 +62,11 @@ jQuery( document ).ready(function( $ ) {
             return fieldError('email','Please enter a valid email address');
         }
 
+        var zipcode = $('#id_zip').val();
+        if (!validateZip(zipcode)) {
+            return fieldError('zip','Please enter a valid US zip code');
+        }
+
         var phone = $('#id_phone').val();
         if (!validatePhone(phone)) {
             return fieldError('phone','Please enter a valid US phone number');
@@ -51,7 +74,8 @@ jQuery( document ).ready(function( $ ) {
 
         var data = {
             campaignId: '{{page.campaignId}}',
-            userPhone: validatePhone(phone)
+            userPhone: validatePhone(phone),
+            zipcode: validateZip(zipcode)
         };
 
         $.ajax({
@@ -91,9 +115,4 @@ function showOverlay() {
                 $('.overlay .modal .inner').addClass('visible');
             }, 10);
         }, 100);
-}
-
-function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
 }
