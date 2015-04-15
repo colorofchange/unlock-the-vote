@@ -1,23 +1,14 @@
 ---
 campaignId: md-hogan-vote
 ---
-// MT1.11 Compat
-var $E = function(selector, filter){
-	return ($(filter) || document).getElement(selector);
-};
-
-var $ES = function(selector, filter){
-	return ($(filter) || document).getElements(selector);
-};
-
-var trackEvent = function(ev) {
-    window['optimizely'] = window['optimizely'] || [];
-    window.optimizely.push(["trackEvent", ev]);
-
-    ga('send', 'event', ev);
-};
 
 jQuery( document ).ready(function( $ ) {
+    var trackEvent = function(ev) {
+        window['optimizely'] = window['optimizely'] || [];
+        window.optimizely.push(["trackEvent", ev]);
+
+        ga('send', 'event', ev);
+    };
 
     var fieldError = function(name, text) {
         var f = $('input[name="'+name+'"]');
@@ -69,9 +60,8 @@ jQuery( document ).ready(function( $ ) {
             dataType: "json",
             data: data,
             success: function(res) {
-                trackEvent('call-congress');
-
-                console.log('Placed call-congress call: ', res);
+                trackEvent('call');
+                console.log('Placed call: ', data, res);
             }
         });
         showOverlay();
@@ -79,36 +69,8 @@ jQuery( document ).ready(function( $ ) {
     };
     $('#phoneForm').submit(onWidgetSubmit);
 
-    $('#emailForm').submit(function(e) {
-        e.preventDefault();
-        $('#email_button').click();
-    });
-
-    $('#email_button').click(function(e) {
-
-        if (!validateEmail($('#email').val()))
-            return fieldError('email','Please enter a valid email address!');
-
-        $('#email_form_fields').addClass('fade');
-        $('.thanks').addClass('visible');
-        setTimeout(function() {
-            $('#email_form_fields').hide();
-        }, 500);
-
-        var form = $('#emailForm');
-        $.post(form.attr('action'), form.serialize(), function(data){});
-
-    });
-
     $('a.twitter').click(function(e) {
-
-        e.preventDefault();
-
         trackEvent('share');
-
-        var tw_text = encodeURIComponent(TWEET_TEXT);
-        window.open('https://twitter.com/intent/tweet?hashtags=&text='+ tw_text +'&related=colorofchange');
-
     });
 
     $('.a.facebook').click(function(e) {
