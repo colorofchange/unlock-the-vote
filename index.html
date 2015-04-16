@@ -1,6 +1,7 @@
 ---
 title: "Maryland: Tell Governor Hogan to Unlock the Vote!"
 image: images/maryland-ballot-box.jpg
+image_caption: '&copy; iStock.com / Niyazz'
 actionkit_page: MDCallsImport
 sp_facebook: sp_12639
 sp_twitter: sp_12638
@@ -21,6 +22,7 @@ sp_email: sp_12640
     <style>
         .phone-fieldset { margin-top: 3px; }
         .overlay { display:none; }
+        .caption { text-align: right; font-size: 0.8em; font-style: italic; margin-bottom: 5px; }
     </style>
     <link rel="icon" type="image/png" href="images/fav.png">
 
@@ -75,7 +77,8 @@ sp_email: sp_12640
             <h1 class="page-title tablet">{{ page.title }}</h1>
 
             <div class="petition-description">
-                 <img class="action-image" src="{{page.image}}" > 
+                 <img class="action-image" src="{{page.image}}" >
+                 <div class="caption">{{page.image_caption}}</div>
         
                 {% include cta.html %}
             </div>
